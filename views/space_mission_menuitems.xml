@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="spaceship_list_action" model="ir.actions.act_window">
+        <field name="name">Spaceship List</field>
+        <field name="res_model">space_mission.spaceship</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create de first Spaceship
+            </p>
+        </field>
+    </record>
+    
+    <menuitem name="Space mission" 
+              id="space_mission" 
+              sequence="1"
+              web_icon="space_mission,static/description/icon.png">
+        <menuitem id="space_mission_sub" name="Space mission" sequence="1">
+            <menuitem id="space_mission_spaceship" name="Spaceship" sequence="2" action="spaceship_list_action"/>
+        </menuitem>
+    </menuitem>
+</odoo>
